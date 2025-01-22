@@ -5,7 +5,8 @@ import threading
 import pyftdi.serialext
 from serial import serialutil
 
-import opendmxadapter.fixtures as fixtures
+import fixtures as fixtures
+
 
 class OpenDMXAdapter:
     def __init__(self, serialPort: str):
