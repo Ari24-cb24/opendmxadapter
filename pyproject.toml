@@ -2,9 +2,12 @@
 requires = ["hatchling >= 1.27.0"]
 build-backend = "hatchling.build"
 
+[tool.hatch.version]
+path = "opendmxadapter/__init__.py"
+
 [project]
+dynamic=["version"]
 name="opendmxadapter"
-version="1.0.2"
 authors=[
     { name="Ari van Houten", email="ari.publicmail@gmail.com" },
 ]
@@ -20,6 +23,10 @@ classifiers=[
 ]
 license="MIT"
 license-files=["LICEN[CS]E*"]
+dependencies=[
+    "pyserial>=3.5",
+    "pyftdi>=0.56.0"
+]
 
 [project.urls]
 Homepage="https://github.com/Ari24-cb24/opendmxadapter"
