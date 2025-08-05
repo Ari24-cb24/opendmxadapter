@@ -1,4 +1,4 @@
-from fixtures.basefixture import BaseFixture, ColorFixture, StroboFixture
+from ..basefixture import BaseFixture, ColorFixture, StroboFixture
 
 
 class RootPar6(BaseFixture, ColorFixture, StroboFixture):

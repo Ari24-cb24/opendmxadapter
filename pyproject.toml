@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling >= 1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name="opendmxadapter"
+version="1.0.0"
+authors=[
+    { name="Ari van Houten", email="ari.publicmail@gmail.com" },
+]
+description="Easy-to-use library to work with an OpenDMX controller"
+reamde="README.md"
+requires-python=">=3.9"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: System :: Hardware :: Universal Serial Bus (USB)",
+    "Typing :: Typed"
+]
+license="MIT"
+license-files=["LICEN[CS]E*"]
+
+[project.urls]
+Homepage="https://github.com/Ari24-cb24/opendmxadapter"
+Issues="https://github.com/Ari24-cb24/opendmxadapter/issues"

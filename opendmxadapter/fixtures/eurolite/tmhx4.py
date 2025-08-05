@@ -1,4 +1,4 @@
-from fixtures.basefixture import BaseFixture, ColorFixture, MovingHeadFixture, StroboFixture
+from ..basefixture import BaseFixture, ColorFixture, MovingHeadFixture, StroboFixture
 
 
 class TMHX4(BaseFixture, ColorFixture, MovingHeadFixture, StroboFixture):

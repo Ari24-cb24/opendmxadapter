@@ -5,7 +5,7 @@ import threading
 import pyftdi.serialext
 from serial import serialutil
 
-import fixtures as fixtures
+from . import fixtures
 
 
 class OpenDMXAdapter:
@@ -46,7 +46,7 @@ class OpenDMXAdapter:
     def setChannel(self, channel, intensity):
         channel = max(0, min(512, channel))
         intensity = max(0, min(255, intensity))
-        self.dmxData[channel] = bytes([intensity])
+        self.dmxData[channel+1] = bytes([intensity])
 
     def blackout(self):
         for i in range(1, 512, 1):

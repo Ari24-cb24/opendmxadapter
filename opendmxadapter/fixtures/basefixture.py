@@ -1,4 +1,4 @@
-from adapter import OpenDMXAdapter
+from ..adapter import OpenDMXAdapter
 
 
 class _AbstractFixture:
