@@ -2,7 +2,7 @@ from ..basefixture import BaseFixture, ColorFixture, MovingHeadFixture, StroboFi
 
 
 class TMHX4(BaseFixture, ColorFixture, MovingHeadFixture, StroboFixture):
-    def __init__(self, rawChannel: int | None = None):
+    def __init__(self, raw_channel: int | None = None):
         """
         16ch mode
         ...
@@ -37,28 +37,28 @@ class TMHX4(BaseFixture, ColorFixture, MovingHeadFixture, StroboFixture):
         22 - Pattern (0-49: Channel 1-20, 50-99: Presets/Macros, 100-149: Internal P1, 150-199: Internal P2, 200-255: Music)
         23 - Reset (251-255)
         """
-        super().__init__(24, rawChannel)
-        self._initializeColorChannels(8, 9, 10, 6)
-        self._initializeMovingHeadChannels(0, 1, 2, 3, 4)
-        self._initializeStroboChannels(7)
+        super().__init__(24, raw_channel)
+        self._initialize_color_channels(8, 9, 10, 6)
+        self._initialize_moving_head_channels(0, 1, 2, 3, 4)
+        self._initialize_strobo_channels(7)
 
-    def setOuterColor(self, r: int, g: int, b: int, w: int, topStart: bool = True):
-        self.setValue(12 + 4 if topStart else 0, r)
-        self.setValue(13 + 4 if topStart else 0, g)
-        self.setValue(14 + 4 if topStart else 0, b)
-        self.setValue(15 + 4 if topStart else 0, b)
+    def set_outer_color(self, r: int, g: int, b: int, w: int, top_start: bool = True):
+        self.set_value(12 + 4 if top_start else 0, r)
+        self.set_value(13 + 4 if top_start else 0, g)
+        self.set_value(14 + 4 if top_start else 0, b)
+        self.set_value(15 + 4 if top_start else 0, w)
 
-    def setLensZoom(self, value: int):
-        self.setValue(5, value)
+    def set_lens_zoom(self, value: int):
+        self.set_value(5, value)
 
-    def setPattern(self, value: int):
-        self.setValue(22, value)
+    def set_pattern(self, value: int):
+        self.set_value(22, value)
 
-    def setReset(self, shouldReset: bool):
-        self.setValue(23, 255 if shouldReset else 0)
+    def set_reset(self, should_reset: bool):
+        self.set_value(23, 255 if should_reset else 0)
 
-    def setColorMacro(self, value: int):
-        self.setValue(20, value)
+    def set_color_macro(self, value: int):
+        self.set_value(20, value)
 
-    def setMacroSpeed(self, value: int):
-        self.setValue(21, value)
+    def set_macro_speed(self, value: int):
+        self.set_value(21, value)

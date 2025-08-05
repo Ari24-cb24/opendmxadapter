@@ -13,22 +13,22 @@ Take a look at [this](https://learn.adafruit.com/circuitpython-on-any-computer-w
 ## Example Usage
 
 ```python
-from adapter import OpenDMXAdapter
-from fixtures.cameo.rootpar6 import RootPar6
+from opendmxadapter.adapter import OpenDMXAdapter
+from opendmxadapter.fixtures.cameo.rootpar6 import RootPar6
 
 controller = OpenDMXAdapter("ftdi://ftdi:232:BG00DND8/1")
 controller.start()
 controller.blackout()
 
 # Either manually set channel values
-controller.setChannel(10, 255)
+controller.set_channel(10, 255)
 
 # Or add a custom fixture
 light = RootPar6(0)
-controller.addFixture(light)
+controller.add_fixture(light)
 
-light.setAmber(255)
-light.setIntensity(100)
+light.set_amber(255)
+light.set_intensity(100)
 
 controller.close()
 ```

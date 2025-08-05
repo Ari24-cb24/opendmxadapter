@@ -2,7 +2,7 @@ from ..basefixture import BaseFixture, ColorFixture, StroboFixture
 
 
 class RootPar6(BaseFixture, ColorFixture, StroboFixture):
-    def __init__(self, rawChannel: int | None = None):
+    def __init__(self, raw_channel: int | None = None):
         """
         8ch mode
         0 - dimmer
@@ -14,15 +14,15 @@ class RootPar6(BaseFixture, ColorFixture, StroboFixture):
         6 - amber
         7 - uv
         """
-        super().__init__(8, rawChannel)
-        self._initializeColorChannels(2, 3, 4, 0)
-        self._initializeStroboChannels(1)
+        super().__init__(8, raw_channel)
+        self._initialize_color_channels(2, 3, 4, 0)
+        self._initialize_strobo_channels(1)
 
-    def setWhite(self, value: int):
-        self.setValue(5, value)
+    def set_white(self, value: int):
+        self.set_value(5, value)
 
-    def setAmber(self, value: int):
-        self.setValue(6, value)
+    def set_amber(self, value: int):
+        self.set_value(6, value)
 
-    def setUV(self, value: int):
-        self.setValue(7, value)
+    def set_uv(self, value: int):
+        self.set_value(7, value)
