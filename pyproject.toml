@@ -12,7 +12,7 @@ authors=[
     { name="Ari van Houten", email="ari.publicmail@gmail.com" },
 ]
 description="Easy-to-use library to work with an OpenDMX controller"
-reamde="README.md"
+readme="README.md"
 requires-python=">=3.9"
 classifiers=[
     "Programming Language :: Python :: 3",
